@@ -1,0 +1,27 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+
+<div class ="row">
+  <div class="col">
+
+    <!--aqui se extraen los characterlist-->
+<app-dbz-list [characterList]="characters"
+
+  (onDelete)="onDeleteCharacter($event)"></app-dbz-list>
+
+  </div>
+
+  <div class ="col">
+ <!--[] para mandar de padre a hijo o asignar atributo-->
+  <!--() para escuchar eventos, eventos -->
+
+
+  <!--para que este componente escuche onnewcharacter = (que quiero hacer) onNewCharacter -->
+
+    <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+
+
+  </div>
+
+</div>
